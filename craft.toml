@@ -1,0 +1,10 @@
+[project]
+name = "Clox"
+version = "0.1.0"
+language = "c"
+c_standard = 99
+
+[build]
+type = "executable"
+include_dirs = ["src"]
+source_dirs = ["src"]
