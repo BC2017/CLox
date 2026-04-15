@@ -1,0 +1,3 @@
+// Lox follows IEEE 754: 1/0 yields infinity rather than a runtime error.
+// expect: inf
+print 1 / 0;

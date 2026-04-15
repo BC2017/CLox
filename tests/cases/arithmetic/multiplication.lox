@@ -1,0 +1,2 @@
+// expect: 12
+print 4 * 3;

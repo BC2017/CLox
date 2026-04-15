@@ -1,0 +1,2 @@
+// expect: true
+print 5 > 3;

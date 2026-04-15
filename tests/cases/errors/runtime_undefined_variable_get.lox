@@ -1,0 +1,3 @@
+// Reading an undefined global is a runtime error.
+// expect runtime error: Undefined variable 'undefined'.
+print undefined;

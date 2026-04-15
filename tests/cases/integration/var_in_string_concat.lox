@@ -1,0 +1,3 @@
+// expect: hello, world
+var name = "world";
+print "hello, " + name;

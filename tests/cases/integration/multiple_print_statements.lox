@@ -1,0 +1,7 @@
+// Each `print` produces its own line of output.
+// expect: 1
+// expect: 2
+// expect: 3
+print 1;
+print 2;
+print 3;

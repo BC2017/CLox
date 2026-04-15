@@ -1,0 +1,4 @@
+// Assignment is an expression that yields the assigned value.
+// expect: 5
+var x = 1;
+print (x = 5);

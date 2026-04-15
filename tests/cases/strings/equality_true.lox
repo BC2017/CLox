@@ -1,0 +1,3 @@
+// String interning: equal strings hash to the same Obj.
+// expect: true
+print "abc" == "abc";

@@ -1,0 +1,5 @@
+// Lox allows redeclaration of globals (no compile or runtime error).
+// expect: 2
+var x = 1;
+var x = 2;
+print x;

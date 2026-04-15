@@ -1,0 +1,4 @@
+// String interning makes "ab" produced by concatenation
+// equal to the literal "ab".
+// expect: true
+print "a" + "b" == "ab";

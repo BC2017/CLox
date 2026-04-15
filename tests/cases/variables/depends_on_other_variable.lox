@@ -1,0 +1,5 @@
+// A later variable can read an earlier one in its initializer.
+// expect: 10
+var x = 5;
+var y = x * 2;
+print y;

@@ -2,4 +2,5 @@
 .craft/
 build/
 bin/
+.claude/
 CMakeLists.txt

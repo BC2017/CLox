@@ -1,0 +1,7 @@
+// A var declared without an initializer can later be assigned.
+// expect: nil
+// expect: hello
+var greeting;
+print greeting;
+greeting = "hello";
+print greeting;
