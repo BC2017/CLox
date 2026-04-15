@@ -31,4 +31,4 @@ run: $(TARGET)
 	@:
 
 clean:
-	rm -rf $(BUILD_DIR)
+	powershell -NoProfile -Command "if (Test-Path '$(BUILD_DIR)') { Remove-Item -Recurse -Force '$(BUILD_DIR)' }"
