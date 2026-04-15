@@ -1,0 +1,6 @@
+// A local `var` without an initializer defaults to nil.
+// expect: nil
+{
+  var x;
+  print x;
+}

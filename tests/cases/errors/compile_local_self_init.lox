@@ -1,0 +1,5 @@
+// A local cannot reference itself in its own initializer.
+// expect compile error: Can't read local variable
+{
+  var a = a;
+}

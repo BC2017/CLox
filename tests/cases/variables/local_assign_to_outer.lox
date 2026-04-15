@@ -1,0 +1,12 @@
+// A nested block can assign to a local declared in an enclosing scope;
+// the modified value persists after the inner block ends.
+// expect: 1
+// expect: 99
+{
+  var x = 1;
+  print x;
+  {
+    x = 99;
+  }
+  print x;
+}

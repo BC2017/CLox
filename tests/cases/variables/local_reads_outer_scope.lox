@@ -1,0 +1,8 @@
+// An inner block can read a local declared in an enclosing scope.
+// expect: hello
+{
+  var greeting = "hello";
+  {
+    print greeting;
+  }
+}

@@ -1,0 +1,11 @@
+// Sibling blocks have independent scopes; the same name can be reused.
+// expect: 1
+// expect: 2
+{
+  var x = 1;
+  print x;
+}
+{
+  var x = 2;
+  print x;
+}

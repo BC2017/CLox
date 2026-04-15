@@ -1,0 +1,7 @@
+// A local's initializer can reference an earlier local in the same block.
+// expect: 10
+{
+  var a = 5;
+  var b = a * 2;
+  print b;
+}

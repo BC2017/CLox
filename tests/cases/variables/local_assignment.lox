@@ -1,0 +1,7 @@
+// Locals can be reassigned; subsequent reads see the new value.
+// expect: 2
+{
+  var x = 1;
+  x = 2;
+  print x;
+}
