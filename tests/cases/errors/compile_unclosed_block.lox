@@ -1,0 +1,4 @@
+// A block must be closed with '}'.
+// expect compile error: Expect '}' after block.
+{
+  var a = 1;

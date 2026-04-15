@@ -1,0 +1,10 @@
+// A local shadows a global with the same name inside the block.
+// After the block ends, the global is visible again with its original value.
+// expect: inner
+// expect: outer
+var name = "outer";
+{
+  var name = "inner";
+  print name;
+}
+print name;

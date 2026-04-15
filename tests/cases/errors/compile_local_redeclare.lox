@@ -1,0 +1,6 @@
+// You cannot redeclare a variable with the same name in the same local scope.
+// expect compile error: Already a variable with that name in this scope
+{
+  var a = 1;
+  var a = 2;
+}

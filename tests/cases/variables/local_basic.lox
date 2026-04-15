@@ -1,0 +1,6 @@
+// A local variable declared in a block is visible within that block.
+// expect: 42
+{
+  var x = 42;
+  print x;
+}
