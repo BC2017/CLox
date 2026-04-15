@@ -1,2 +1,2 @@
 // expect: false
-"abc" == "def"
+print "abc" == "def";

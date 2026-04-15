@@ -1,0 +1,3 @@
+// Note: the message in src/compiler.c contains the typo "afer" instead of "after".
+// expect compile error: Expect ';' afer value.
+print 1

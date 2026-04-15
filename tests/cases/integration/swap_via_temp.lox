@@ -1,0 +1,10 @@
+// Classic temp-variable swap. After the swap, a holds 2 and b holds 1.
+// expect: 2
+// expect: 1
+var a = 1;
+var b = 2;
+var tmp = a;
+a = b;
+b = tmp;
+print a;
+print b;

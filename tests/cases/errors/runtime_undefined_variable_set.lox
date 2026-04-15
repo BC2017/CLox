@@ -1,0 +1,4 @@
+// Assigning to an undeclared global is a runtime error
+// (no implicit declaration on assignment).
+// expect runtime error: Undefined variable 'missing'.
+missing = 1;

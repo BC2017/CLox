@@ -1,2 +1,2 @@
 // expect: true
-!!true
+print !!true;

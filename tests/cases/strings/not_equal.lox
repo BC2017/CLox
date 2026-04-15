@@ -1,2 +1,2 @@
 // expect: true
-"abc" != "abd"
+print "abc" != "abd";

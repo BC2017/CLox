@@ -1,0 +1,7 @@
+// `1 + 1;` is a valid statement; its value is discarded by OP_POP,
+// so only the two explicit prints produce output.
+// expect: before
+// expect: after
+print "before";
+1 + 1;
+print "after";

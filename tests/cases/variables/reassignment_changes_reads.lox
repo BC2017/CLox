@@ -1,0 +1,10 @@
+// State is preserved across reads.
+// expect: 1
+// expect: 2
+// expect: 3
+var counter = 1;
+print counter;
+counter = counter + 1;
+print counter;
+counter = counter + 1;
+print counter;

@@ -1,2 +1,2 @@
 // expect: true
-nil == nil
+print nil == nil;

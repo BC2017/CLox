@@ -1,3 +1,3 @@
 // Two different concatenation paths produce the same interned string.
 // expect: true
-"hello" + " " + "world" == "hello " + "world"
+print "hello" + " " + "world" == "hello " + "world";
