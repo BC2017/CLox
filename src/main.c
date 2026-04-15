@@ -33,7 +33,7 @@ static char* readFile(const char* path) {
 
   char* buffer = (char*)malloc(fileSize + 1);
   if (buffer == NULL) {
-    fprintf(stderr,"Not enough memory to read \"%s\".\n", path);
+    fprintf(stderr, "Not enough memory to read \"%s\".\n", path);
     exit(74);
   }
 
@@ -68,6 +68,6 @@ int main(int argc, const char* argv[]) {
     fprintf(stderr, "Usage: clox [path]\n");
     exit(64);
   }
-  
+
   return 0;
 }

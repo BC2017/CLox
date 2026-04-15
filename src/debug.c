@@ -1,6 +1,8 @@
 #include "debug.h"
-#include "chunk.h"
+
 #include <stdio.h>
+
+#include "chunk.h"
 
 void disassembleChunk(Chunk* chunk, const char* name) {
   printf("== %s ==\n", name);
