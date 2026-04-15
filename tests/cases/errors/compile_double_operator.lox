@@ -1,0 +1,3 @@
+// The second '+' has no prefix rule.
+// expect compile error: Expect expression
+1 + + 2

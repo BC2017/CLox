@@ -1,0 +1,3 @@
+// Subtraction is only defined for numbers.
+// expect runtime error: Operands must be numbers
+"a" - "b"

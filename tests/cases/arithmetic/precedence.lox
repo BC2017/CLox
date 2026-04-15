@@ -1,0 +1,3 @@
+// Multiplication binds tighter than addition.
+// expect: 14
+2 + 3 * 4

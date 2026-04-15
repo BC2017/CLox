@@ -1,0 +1,2 @@
+// expect compile error: Expect ')' after expression.
+(1 + 2

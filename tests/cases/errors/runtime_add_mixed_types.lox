@@ -1,0 +1,3 @@
+// + accepts (number, number) or (string, string), nothing else.
+// expect runtime error: Operands must be two numbers or two strings
+1 + "x"

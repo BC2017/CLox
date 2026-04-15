@@ -1,0 +1,2 @@
+// expect: false
+1 == 2

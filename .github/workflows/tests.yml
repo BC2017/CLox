@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Show toolchain versions
+        run: |
+          gcc --version
+          make --version
+          python3 --version
+
+      - name: Build the release binary
+        run: make all
+
+      - name: Run the test suite
+        run: make test

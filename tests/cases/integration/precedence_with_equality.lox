@@ -1,0 +1,3 @@
+// Verifies that arithmetic binds tighter than equality.
+// expect: true
+1 + 2 * 3 == 7

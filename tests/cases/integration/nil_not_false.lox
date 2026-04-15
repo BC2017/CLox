@@ -1,0 +1,3 @@
+// nil and false are both falsey but they are not equal.
+// expect: true
+!(nil == false)

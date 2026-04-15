@@ -1,0 +1,3 @@
+// A bare operator has no prefix rule.
+// expect compile error: Expect expression
++

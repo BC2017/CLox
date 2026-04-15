@@ -1,0 +1,3 @@
+// Equality across different types is always false.
+// expect: false
+1 == true

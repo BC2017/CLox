@@ -11,9 +11,14 @@ OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
 
 RUN_ARGS := $(filter %.lox,$(MAKECMDGOALS))
 
-.PHONY: all run clean
+PYTHON ?= python3
+
+.PHONY: all run clean test
 
 all: $(TARGET)
+
+test:
+	$(PYTHON) tests/harness/run_tests.py
 
 $(TARGET): $(OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^
