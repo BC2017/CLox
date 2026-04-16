@@ -1,0 +1,9 @@
+// A basic while loop counts down until the condition is false.
+// expect: 3
+// expect: 2
+// expect: 1
+var i = 3;
+while (i > 0) {
+  print i;
+  i = i - 1;
+}

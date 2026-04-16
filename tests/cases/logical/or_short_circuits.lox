@@ -1,0 +1,6 @@
+// 'or' short-circuits: if the left side is truthy, the right is skipped
+// (so the assignment in the right operand never runs).
+// expect: unchanged
+var x = "unchanged";
+true or (x = "changed");
+print x;

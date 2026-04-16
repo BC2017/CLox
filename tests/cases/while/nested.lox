@@ -1,0 +1,17 @@
+// Nested while loops iterate the inner loop fully per outer iteration.
+// expect: outer
+// expect: inner
+// expect: inner
+// expect: outer
+// expect: inner
+// expect: inner
+var i = 0;
+while (i < 2) {
+  print "outer";
+  var j = 0;
+  while (j < 2) {
+    print "inner";
+    j = j + 1;
+  }
+  i = i + 1;
+}

@@ -1,0 +1,6 @@
+// Chaining 'and' yields the last truthy operand when all are truthy,
+// and the first falsey operand otherwise.
+// expect: c
+// expect: nil
+print "a" and "b" and "c";
+print "a" and nil and "c";

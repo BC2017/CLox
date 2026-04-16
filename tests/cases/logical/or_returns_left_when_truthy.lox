@@ -1,0 +1,5 @@
+// 'or' returns its left operand when that operand is truthy.
+// expect: 1
+// expect: first
+print 1 or 2;
+print "first" or "second";

@@ -1,0 +1,5 @@
+// Combining no initializer + no condition would loop forever, so here
+// we confirm that a pre-false condition with no initializer is honored.
+var done = true;
+for (; !done; done = true) print "never";
+print "ok"; // expect: ok

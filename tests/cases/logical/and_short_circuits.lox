@@ -1,0 +1,6 @@
+// 'and' short-circuits: if the left side is falsey, the right is skipped
+// (so the assignment in the right operand never runs).
+// expect: unchanged
+var x = "unchanged";
+false and (x = "changed");
+print x;

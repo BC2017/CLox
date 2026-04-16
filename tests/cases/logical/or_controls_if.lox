@@ -1,0 +1,4 @@
+// Using 'or' in an if condition enters the then branch when at least
+// one side is truthy.
+// expect: some
+if (false or true) print "some"; else print "none";

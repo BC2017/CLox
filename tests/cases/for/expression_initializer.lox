@@ -1,0 +1,8 @@
+// An expression initializer (no 'var') reuses an existing variable.
+// expect: 5
+// expect: 6
+// expect: 7
+var i = 99;
+for (i = 5; i < 8; i = i + 1) {
+  print i;
+}

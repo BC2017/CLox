@@ -1,0 +1,4 @@
+// If the condition is false on entry the body never runs.
+print "before"; // expect: before
+for (var i = 0; i < 0; i = i + 1) print "inside";
+print "after";  // expect: after

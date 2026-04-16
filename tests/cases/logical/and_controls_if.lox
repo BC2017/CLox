@@ -1,0 +1,4 @@
+// Using 'and' in an if condition only enters the then branch when both
+// sides are truthy.
+// expect: both
+if (true and true) print "both"; else print "not both";

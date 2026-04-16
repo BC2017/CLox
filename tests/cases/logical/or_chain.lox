@@ -1,0 +1,6 @@
+// Chaining 'or' yields the first truthy operand, or the last operand
+// if every operand is falsey.
+// expect: b
+// expect: false
+print nil or "b" or "c";
+print nil or false or false;

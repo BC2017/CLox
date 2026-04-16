@@ -1,0 +1,8 @@
+// Omitting the initializer leaves any pre-declared variable unchanged.
+// expect: 0
+// expect: 1
+// expect: 2
+var i = 0;
+for (; i < 3; i = i + 1) {
+  print i;
+}

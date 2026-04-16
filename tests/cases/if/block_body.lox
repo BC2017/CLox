@@ -1,0 +1,10 @@
+// A block is a valid statement body for if/else.
+// expect: a
+// expect: b
+if (true) {
+  print "a";
+  print "b";
+} else {
+  print "x";
+  print "y";
+}

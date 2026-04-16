@@ -1,0 +1,7 @@
+// Classic three-clause for loop iterates over 0, 1, 2.
+// expect: 0
+// expect: 1
+// expect: 2
+for (var i = 0; i < 3; i = i + 1) {
+  print i;
+}

@@ -1,0 +1,7 @@
+// A local variable evaluated as the condition picks the right branch.
+// expect: big
+{
+  var x = 10;
+  if (x > 5) print "big";
+  else print "small";
+}

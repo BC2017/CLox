@@ -1,0 +1,7 @@
+// A dangling else binds to the nearest preceding if.
+// Since the outer if is true and the inner if is false,
+// only the inner else should run.
+// expect: inner else
+if (true)
+  if (false) print "inner then";
+  else print "inner else";
