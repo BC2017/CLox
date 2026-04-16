@@ -1,10 +1,26 @@
-// Evaluate the 'then' expression if the condition is true.
-if (true) print "good"; // expect: good
-if (false) print "bad";
+{
+  var i = "before";
 
-// Allow block body.
-if (true) { print "block"; } // expect: block
+  // New variable is in inner scope.
+  for (var i = 0; i < 1; i = i + 1) {
+    print i; // expect: 0
 
-// Assignment in if condition.
-var a = false;
-if (a = true) print a; // expect: true
+    // Loop body is in second inner scope.
+    var i = -1;
+    print i; // expect: -1
+  }
+}
+
+{
+  // New variable shadows outer variable.
+  for (var i = 0; i > 0; i = i + 1) {}
+
+  // Goes out of scope after loop.
+  var i = "after";
+  print i; // expect: after
+
+  // Can reuse an existing variable.
+  for (i = 0; i < 1; i = i + 1) {
+    print i; // expect: 0
+  }
+}

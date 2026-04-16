@@ -1,0 +1,3 @@
+// Only nil and false are falsey in Lox.
+// expect: falsey
+if (nil) print "truthy"; else print "falsey";

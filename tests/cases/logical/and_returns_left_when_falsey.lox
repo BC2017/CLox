@@ -1,0 +1,5 @@
+// 'and' returns its left operand when that operand is falsey.
+// expect: nil
+// expect: false
+print nil and 1;
+print false and 1;

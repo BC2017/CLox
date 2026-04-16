@@ -1,0 +1,4 @@
+// 'and' binds tighter than 'or', so `true or false and false` is
+// `true or (false and false)` => true, not `(true or false) and false` => false.
+// expect: true
+print true or false and false;

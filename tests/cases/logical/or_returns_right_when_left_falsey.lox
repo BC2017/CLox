@@ -1,0 +1,5 @@
+// 'or' returns its right operand when the left is falsey.
+// expect: fallback
+// expect: false
+print nil or "fallback";
+print nil or false;

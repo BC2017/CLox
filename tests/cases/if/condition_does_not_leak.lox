@@ -1,0 +1,6 @@
+// The condition value must not remain on the stack after the if completes,
+// so a following print still reads the correct value.
+// expect: 7
+var x = 7;
+if (true) {}
+print x;

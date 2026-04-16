@@ -1,0 +1,4 @@
+// A false condition with no else leaves control flow untouched.
+print "before";   // expect: before
+if (false) print "inside";
+print "after";    // expect: after

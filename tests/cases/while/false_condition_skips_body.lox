@@ -1,0 +1,4 @@
+// A while whose condition is false from the start never executes the body.
+print "before"; // expect: before
+while (false) print "inside";
+print "after";  // expect: after

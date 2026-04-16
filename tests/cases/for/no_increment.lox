@@ -1,0 +1,8 @@
+// Omitting the increment clause still works if the body advances the variable.
+// expect: 0
+// expect: 1
+// expect: 2
+for (var i = 0; i < 3;) {
+  print i;
+  i = i + 1;
+}

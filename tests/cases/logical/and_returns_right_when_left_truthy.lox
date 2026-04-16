@@ -1,0 +1,5 @@
+// 'and' returns its right operand when the left is truthy.
+// expect: 2
+// expect: last
+print 1 and 2;
+print "first" and "last";

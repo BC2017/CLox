@@ -1,0 +1,3 @@
+// In Lox, 0 is truthy (unlike C/Python).
+// expect: truthy
+if (0) print "truthy"; else print "falsey";

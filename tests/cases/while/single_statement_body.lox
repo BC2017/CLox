@@ -1,0 +1,6 @@
+// While accepts a single (non-block) statement as its body.
+// Each iteration increments i until the condition becomes false.
+// expect: 3
+var i = 0;
+while (i < 3) i = i + 1;
+print i;

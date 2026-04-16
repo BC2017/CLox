@@ -1,0 +1,6 @@
+// A var declared in the for initializer is scoped to the loop,
+// so an outer variable of the same name is unaffected.
+// expect: outer
+var i = "outer";
+for (var i = 0; i < 2; i = i + 1) {}
+print i;

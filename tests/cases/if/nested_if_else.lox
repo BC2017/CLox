@@ -1,0 +1,11 @@
+// Nested if/else should select the correct branch based on both conditions.
+// expect: inner then
+if (true) {
+  if (true) {
+    print "inner then";
+  } else {
+    print "inner else";
+  }
+} else {
+  print "outer else";
+}

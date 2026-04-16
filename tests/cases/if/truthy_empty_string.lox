@@ -1,0 +1,3 @@
+// In Lox, the empty string is truthy.
+// expect: truthy
+if ("") print "truthy"; else print "falsey";
