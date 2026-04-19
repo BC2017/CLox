@@ -1,0 +1,7 @@
+// Functions are first-class values — assign to a var and call through it.
+// expect: 9
+fun square(n) {
+  return n * n;
+}
+var f = square;
+print f(3);

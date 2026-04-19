@@ -1,0 +1,4 @@
+// Passing fewer arguments than the function's arity is a runtime error.
+// expect runtime error: Expected 2 arguments but got 1
+fun add(a, b) { return a + b; }
+add(1);

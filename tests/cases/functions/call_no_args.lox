@@ -1,0 +1,6 @@
+// A function declared and called with no arguments executes its body.
+// expect: hello
+fun greet() {
+  print "hello";
+}
+greet();

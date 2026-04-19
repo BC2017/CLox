@@ -1,0 +1,14 @@
+// Globals are resolved at call time, so `isEven` can reference `isOdd`
+// before `isOdd` is defined.
+// expect: true
+// expect: false
+fun isEven(n) {
+  if (n == 0) return true;
+  return isOdd(n - 1);
+}
+fun isOdd(n) {
+  if (n == 0) return false;
+  return isEven(n - 1);
+}
+print isEven(4);
+print isEven(7);

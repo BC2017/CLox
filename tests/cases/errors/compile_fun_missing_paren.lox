@@ -1,0 +1,3 @@
+// The parameter list is required after the function name.
+// expect compile error: Expect '(' after function name
+fun foo {}

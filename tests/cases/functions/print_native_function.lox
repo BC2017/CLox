@@ -1,0 +1,3 @@
+// Printing the built-in clock prints the native-fn marker, not a name.
+// expect: <native fn>
+print clock;

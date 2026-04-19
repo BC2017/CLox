@@ -1,0 +1,4 @@
+// Only functions (and eventually classes) can be called.
+// expect runtime error: Can only call functions and classes.
+var x = 1;
+x();

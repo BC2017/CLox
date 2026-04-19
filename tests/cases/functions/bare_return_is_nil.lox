@@ -1,0 +1,6 @@
+// A bare `return;` with no value produces nil.
+// expect: nil
+fun bail() {
+  return;
+}
+print bail();

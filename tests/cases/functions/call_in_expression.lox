@@ -1,0 +1,6 @@
+// Call expressions compose with arithmetic via normal precedence.
+// expect: 11
+fun one() { return 1; }
+fun two() { return 2; }
+fun five() { return 5; }
+print one() + two() * five();

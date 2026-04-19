@@ -1,0 +1,4 @@
+// Passing more arguments than the function's arity is a runtime error.
+// expect runtime error: Expected 1 arguments but got 3
+fun id(x) { return x; }
+id(1, 2, 3);

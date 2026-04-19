@@ -1,0 +1,10 @@
+// Multiple parameters bind positionally in declaration order.
+// expect: 1
+// expect: 2
+// expect: 3
+fun triple(a, b, c) {
+  print a;
+  print b;
+  print c;
+}
+triple(1, 2, 3);

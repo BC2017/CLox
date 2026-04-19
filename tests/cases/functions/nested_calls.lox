@@ -1,0 +1,9 @@
+// Calls can nest: inner() runs, its return flows into outer()'s argument.
+// expect: 6
+fun inner() {
+  return 2;
+}
+fun outer(x) {
+  return x * 3;
+}
+print outer(inner());

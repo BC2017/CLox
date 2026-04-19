@@ -1,0 +1,4 @@
+// A function with no return statement implicitly returns nil.
+// expect: nil
+fun noReturn() {}
+print noReturn();

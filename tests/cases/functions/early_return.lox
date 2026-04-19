@@ -1,0 +1,7 @@
+// Return halts execution; code after the taken branch does not run.
+// expect: positive
+fun sign(n) {
+  if (n > 0) return "positive";
+  return "non-positive";
+}
+print sign(5);

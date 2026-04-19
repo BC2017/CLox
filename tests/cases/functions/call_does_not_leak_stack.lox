@@ -1,0 +1,5 @@
+// After a call completes, the caller's surrounding expression continues
+// to evaluate with the correct stack state.
+// expect: 100
+fun add(a, b) { return a + b; }
+print add(1, 2) + add(3, 4) + add(40, 50);

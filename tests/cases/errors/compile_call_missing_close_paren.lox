@@ -1,0 +1,4 @@
+// A call expression must have a closing ')' after its argument list.
+// expect compile error: Expect ')' after arguments.
+fun foo(a) {}
+foo(1;

@@ -1,0 +1,6 @@
+// A single parameter is bound to the argument at call time.
+// expect: 42
+fun echo(x) {
+  print x;
+}
+echo(42);

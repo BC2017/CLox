@@ -1,0 +1,8 @@
+// Local variables declared inside a function live in its own frame.
+// expect: 30
+fun compute(n) {
+  var doubled = n + n;
+  var tripled = doubled + n;
+  return tripled;
+}
+print compute(10);

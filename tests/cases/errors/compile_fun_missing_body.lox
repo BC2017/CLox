@@ -1,0 +1,3 @@
+// A function body must be a block enclosed in braces.
+// expect compile error: Expect '{' before function body
+fun foo()

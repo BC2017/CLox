@@ -1,0 +1,3 @@
+// `return` is only valid inside a function body.
+// expect compile error: Can't return from top-level code
+return 1;

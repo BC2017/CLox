@@ -1,0 +1,9 @@
+// A function may return another (already-declared) function.
+// expect: 4
+fun twice(n) {
+  return n + n;
+}
+fun picker() {
+  return twice;
+}
+print picker()(2);

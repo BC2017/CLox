@@ -1,0 +1,9 @@
+// A function can be passed as an argument and invoked by the callee.
+// expect: 10
+fun apply(f, x) {
+  return f(x);
+}
+fun double(n) {
+  return n + n;
+}
+print apply(double, 5);
