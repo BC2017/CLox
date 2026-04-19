@@ -1,0 +1,4 @@
+// Printing a user function shows its name in `<fn name>` form.
+// expect: <fn greet>
+fun greet() {}
+print greet;

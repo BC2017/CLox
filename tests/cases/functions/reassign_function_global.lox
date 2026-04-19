@@ -1,0 +1,9 @@
+// A function name is just a global — it can be reassigned to another value.
+// expect: <fn a>
+// expect: <fn b>
+fun a() {}
+fun b() {}
+var f = a;
+print f;
+f = b;
+print f;

@@ -1,0 +1,6 @@
+// An explicit return produces the call's value.
+// expect: 7
+fun add(a, b) {
+  return a + b;
+}
+print add(3, 4);

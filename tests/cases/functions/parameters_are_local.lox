@@ -1,0 +1,8 @@
+// Parameters are local to the call and do not leak to the enclosing scope.
+// expect: outer
+var x = "outer";
+fun shadow(x) {
+  // the parameter shadows the global for the duration of the call
+}
+shadow("inner");
+print x;

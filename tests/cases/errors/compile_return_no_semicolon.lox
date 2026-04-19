@@ -1,0 +1,5 @@
+// A return with a value requires a trailing semicolon.
+// expect compile error: Expect ';' after return value
+fun f() {
+  return 1
+}

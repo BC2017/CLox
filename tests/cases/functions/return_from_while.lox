@@ -1,0 +1,11 @@
+// Return inside a loop stops iteration and exits the function.
+// expect: 3
+fun firstMatch() {
+  var i = 0;
+  while (i < 10) {
+    if (i == 3) return i;
+    i = i + 1;
+  }
+  return -1;
+}
+print firstMatch();

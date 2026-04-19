@@ -1,0 +1,7 @@
+// A function may call itself; the call stack unwinds correctly.
+// expect: 120
+fun fact(n) {
+  if (n <= 1) return 1;
+  return n * fact(n - 1);
+}
+print fact(5);

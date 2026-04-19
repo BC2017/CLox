@@ -1,0 +1,3 @@
+// Calling nil is a runtime error, not a silent no-op.
+// expect runtime error: Can only call functions and classes.
+nil();

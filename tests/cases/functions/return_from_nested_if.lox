@@ -1,0 +1,11 @@
+// Return unwinds out of nested control flow inside the function body.
+// expect: match
+fun classify(n) {
+  if (n > 0) {
+    if (n < 10) {
+      return "match";
+    }
+  }
+  return "other";
+}
+print classify(5);

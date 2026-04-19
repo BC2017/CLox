@@ -1,0 +1,5 @@
+// Time never goes backwards: clock() called twice gives a non-negative delta.
+// expect: true
+var a = clock();
+var b = clock();
+print b - a >= 0;

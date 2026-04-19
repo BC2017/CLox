@@ -1,0 +1,7 @@
+// Classic recursive fibonacci. Exercises two recursive calls per frame.
+// expect: 55
+fun fib(n) {
+  if (n < 2) return n;
+  return fib(n - 2) + fib(n - 1);
+}
+print fib(10);
