@@ -1,0 +1,17 @@
+// Two closures created in the same scope share the same captured variable;
+// a write through one is observable through the other.
+// expect: 0
+// expect: 42
+var getter;
+var setter;
+fun makePair() {
+  var value = 0;
+  fun get() { return value; }
+  fun set(v) { value = v; }
+  getter = get;
+  setter = set;
+}
+makePair();
+print getter();
+setter(42);
+print getter();

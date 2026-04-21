@@ -1,0 +1,10 @@
+// Function parameters are locals and can be captured by a nested function,
+// even after the outer call's frame is gone.
+// expect: hello
+fun greet(msg) {
+  fun say() {
+    print msg;
+  }
+  return say;
+}
+greet("hello")();
