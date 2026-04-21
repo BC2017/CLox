@@ -1,0 +1,16 @@
+// A captured local goes out of scope while its enclosing function is still
+// running. OP_CLOSE_UPVALUE must hoist the value to the heap so the closure
+// still sees it when called later.
+// expect: still here
+fun outer() {
+  var closure;
+  {
+    var local = "still here";
+    fun inner() {
+      print local;
+    }
+    closure = inner;
+  }
+  return closure;
+}
+outer()();

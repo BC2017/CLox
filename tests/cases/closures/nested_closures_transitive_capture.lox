@@ -1,0 +1,15 @@
+// Innermost function captures a variable from a non-immediate enclosing
+// scope. middle() doesn't mention x, but the compiler must still route the
+// upvalue through it so inner() can reach it.
+// expect: captured
+fun outer() {
+  var x = "captured";
+  fun middle() {
+    fun inner() {
+      print x;
+    }
+    return inner;
+  }
+  return middle;
+}
+outer()()();

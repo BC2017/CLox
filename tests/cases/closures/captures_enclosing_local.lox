@@ -1,0 +1,12 @@
+// A nested function can read a local from its enclosing function after the
+// enclosing function has returned.
+// expect: outside
+fun outer() {
+  var x = "outside";
+  fun inner() {
+    print x;
+  }
+  return inner;
+}
+var closure = outer();
+closure();

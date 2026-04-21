@@ -1,0 +1,17 @@
+// Assigning to a captured variable is observable on later calls to the same
+// closure. Exercises OP_SET_UPVALUE and the closed-over heap storage.
+// expect: 1
+// expect: 2
+// expect: 3
+fun makeCounter() {
+  var count = 0;
+  fun increment() {
+    count = count + 1;
+    return count;
+  }
+  return increment;
+}
+var counter = makeCounter();
+print counter();
+print counter();
+print counter();
