@@ -1,0 +1,14 @@
+// After the enclosing scope exits, the upvalue is closed: its value lives
+// inside the upvalue object itself. That value must be reachable via the
+// closure during later allocations.
+// expect: hello
+fun make() {
+  var msg = "hello";
+  fun get() { return msg; }
+  return get;
+}
+var g = make();
+for (var i = 0; i < 100; i = i + 1) {
+  var tmp = "x" + "y";
+}
+print g();

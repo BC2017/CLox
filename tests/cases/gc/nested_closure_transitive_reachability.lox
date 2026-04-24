@@ -1,0 +1,18 @@
+// An inner closure reaches an outer captured value through a chain of
+// upvalues. Every link in the chain must be marked when the inner closure
+// is marked.
+// expect: outer-inner
+fun outer() {
+  var a = "outer";
+  fun middle() {
+    var b = "inner";
+    fun inner() { return a + "-" + b; }
+    return inner;
+  }
+  return middle();
+}
+var f = outer();
+for (var i = 0; i < 80; i = i + 1) {
+  var tmp = "trash" + "heap";
+}
+print f();

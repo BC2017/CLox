@@ -1,0 +1,20 @@
+// Two closures share a captured variable. A write through one must still
+// be observable through the other after heavy allocation, proving the
+// shared upvalue object is not duplicated or lost during GC.
+// expect: 0
+// expect: 42
+var getter;
+var setter;
+fun makePair() {
+  var value = 0;
+  fun get() { return value; }
+  fun set(v) { value = v; }
+  getter = get;
+  setter = set;
+}
+makePair();
+print getter();
+for (var i = 0; i < 40; i = i + 1) { var tmp = "junk" + "data"; }
+setter(42);
+for (var i = 0; i < 40; i = i + 1) { var tmp = "junk" + "data"; }
+print getter();
