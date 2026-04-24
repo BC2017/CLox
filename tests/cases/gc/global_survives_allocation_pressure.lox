@@ -1,0 +1,8 @@
+// A value stored in a global must remain reachable across many intermediate
+// allocations. Validates that the globals table is treated as a GC root.
+// expect: kept
+var kept = "kept";
+for (var i = 0; i < 50; i = i + 1) {
+  var tmp = "noise-" + "value";
+}
+print kept;

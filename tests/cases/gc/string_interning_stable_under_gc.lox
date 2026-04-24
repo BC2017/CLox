@@ -1,0 +1,12 @@
+// The strings table holds weak references: tableRemoveWhite must drop
+// unreachable string keys before sweep, but must not disturb interned
+// strings that are still in use. A literal compared to itself after heavy
+// allocation must still be equal (interning still valid).
+// expect: true
+// expect: true
+fun check() { return "hello" == "hello"; }
+print check();
+for (var i = 0; i < 60; i = i + 1) {
+  var tmp = "drop-" + "me";
+}
+print check();

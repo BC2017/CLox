@@ -1,0 +1,20 @@
+// A counter closure's upvalue state must stay consistent across bursts of
+// unrelated allocation between calls.
+// expect: 1
+// expect: 2
+// expect: 3
+fun makeCounter() {
+  var n = 0;
+  fun inc() {
+    n = n + 1;
+    return n;
+  }
+  return inc;
+}
+var c = makeCounter();
+for (var i = 0; i < 30; i = i + 1) { var x = "a" + "b"; }
+print c();
+for (var i = 0; i < 30; i = i + 1) { var x = "a" + "b"; }
+print c();
+for (var i = 0; i < 30; i = i + 1) { var x = "a" + "b"; }
+print c();

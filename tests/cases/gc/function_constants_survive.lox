@@ -1,0 +1,7 @@
+// Calling a function repeatedly exercises its chunk's constant pool.
+// The string literal stored there must survive every GC cycle that the
+// function's closure is marked.
+// expect: literal
+fun f() { return "literal"; }
+for (var i = 0; i < 100; i = i + 1) { f(); }
+print f();

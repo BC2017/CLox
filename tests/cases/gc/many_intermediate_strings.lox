@@ -1,0 +1,10 @@
+// A tight loop of short-lived string allocations exercises the sweep path:
+// most allocations are unreachable and must be collected without corrupting
+// the live state (the counter and the final result).
+// expect: 100
+var n = 0;
+for (var i = 0; i < 100; i = i + 1) {
+  var tmp = "drop-" + "me";
+  n = n + 1;
+}
+print n;

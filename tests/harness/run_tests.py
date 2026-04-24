@@ -119,7 +119,7 @@ def needs_rebuild(binary: Path) -> bool:
 
 
 DEBUG_DEFINE_RE = re.compile(
-    r"^([ \t]*#[ \t]*define[ \t]+)(DEBUG_TRACE_EXECUTION|DEBUG_PRINT_CODE)\b.*$",
+    r"^([ \t]*#[ \t]*define[ \t]+)(DEBUG_TRACE_EXECUTION|DEBUG_PRINT_CODE|DEBUG_LOG_GC)\b.*$",
     re.MULTILINE,
 )
 

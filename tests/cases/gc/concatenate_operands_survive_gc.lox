@@ -1,0 +1,9 @@
+// String concatenation allocates the result inside takeString, which can
+// trigger GC. The two operands must remain reachable (via the VM stack)
+// until the result is pushed, or they would be swept mid-concatenation.
+// expect: aaaaaaaa
+var s = "";
+for (var i = 0; i < 8; i = i + 1) {
+  s = s + "a";
+}
+print s;

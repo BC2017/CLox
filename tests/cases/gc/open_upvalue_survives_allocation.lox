@@ -1,0 +1,15 @@
+// While the enclosing function is still on the call stack, its local that
+// has been captured as an open upvalue must survive GC triggered by
+// allocations inside the inner function.
+// expect: captured
+fun outer() {
+  var s = "captured";
+  fun inner() {
+    for (var i = 0; i < 50; i = i + 1) {
+      var tmp = "noise" + "junk";
+    }
+    return s;
+  }
+  return inner();
+}
+print outer();
